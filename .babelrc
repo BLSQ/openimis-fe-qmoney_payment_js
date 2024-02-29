@@ -1,0 +1,22 @@
+{
+    "presets":
+    [
+        [
+            "@babel/preset-env",
+            {
+                "modules": "auto"
+            }
+        ],
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "classic"
+            }
+        ]
+    ],
+    "plugins":
+    [
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-proposal-class-properties",
+    ]
+}
