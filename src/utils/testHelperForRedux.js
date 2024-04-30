@@ -1,14 +1,14 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
+import React from "react";
+import { render } from "@testing-library/react";
+import { Provider } from "react-redux";
 
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 // import { setupStore } from '../app/store'
 
-const setupStore = preloadedState => {
+const setupStore = (preloadedState) => {
   return configureStore({
     reducer: rootReducer,
-    preloadedState
+    preloadedState,
   });
 };
 
@@ -17,7 +17,7 @@ const initialState = {};
 const rootReducer = combineReducers({
   policy: (state = initialState, _action) => {
     return state;
-  }
+  },
 });
 
 export function renderWithProviders(ui, extendedRenderOptions = {}) {
@@ -35,6 +35,6 @@ export function renderWithProviders(ui, extendedRenderOptions = {}) {
   // Return an object with the store and all of RTL's query functions
   return {
     store,
-    ...render(ui, { wrapper: Wrapper, ...renderOptions })
+    ...render(ui, { wrapper: Wrapper, ...renderOptions }),
   };
 }
